@@ -18,7 +18,7 @@ export const Statistics = ({
   return (
     <List>
       {Object.entries(optionsData).map(([label, value]) => (
-        <StatisticsItem label={label} value={value} />
+        <StatisticsItem key={label} label={label} value={value} />
       ))}
       <StatisticsItem label="Positive feedback" value={positivePercentage} />
     </List>

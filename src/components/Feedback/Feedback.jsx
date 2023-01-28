@@ -23,7 +23,9 @@ export class Feedback extends Component {
   };
 
   countPositiveFeedbackPercentage = () => {
-    return Math.round((this.state.good / this.countTotalFeedback()) * 100);
+    return `${Math.round(
+      (this.state.good / this.countTotalFeedback()) * 100
+    )}%`;
   };
 
   getOptions = () => {
@@ -51,7 +53,7 @@ export class Feedback extends Component {
               neutral={neutral}
               bad={bad}
               total={total}
-              positivePercentage={`${positivePercentage}%`}
+              positivePercentage={positivePercentage}
             />
           ) : (
             <Notification message="There is no feedback" />

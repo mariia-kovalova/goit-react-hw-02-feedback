@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
+import { StyledButton } from './Button.styled';
 
 export const Button = ({ option, onLeaveFeedback }) => {
   return (
-    <button type="button" name={option} onClick={onLeaveFeedback}>
+    <StyledButton type="button" name={option} onClick={onLeaveFeedback}>
       {option}
-    </button>
+    </StyledButton>
   );
 };
 

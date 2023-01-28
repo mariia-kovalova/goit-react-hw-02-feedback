@@ -1,9 +1,10 @@
 import { Button } from 'components/Button/Button';
 import PropTypes from 'prop-types';
+import { Wrapper } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <>
+    <Wrapper>
       {options.map(option => (
         <Button
           key={option}
@@ -11,7 +12,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
           onLeaveFeedback={onLeaveFeedback}
         />
       ))}
-    </>
+    </Wrapper>
   );
 };
 
